@@ -15,7 +15,7 @@ This sample app demonstrates read operations on a GDN KV collection using Local 
 
 ## Build Docker container
 
--   Use the following commands to build and push the container image to Docker hub. In below commands please update `macrometacorp/sample-node-app` with your docker repository name.
+-   Use the following commands to build and push the container image to Docker hub. In below commands please update `macrometalabs/sample-node-app` with your docker repository name.
 
     ```
     $ git clone https://github.com/Macrometacorp/compute-samples.git
@@ -57,7 +57,8 @@ gdnsl service create sample-node-app \
     --env URL_LOCAL_DB=c8db-coord-svc.c8.svc.cluster.local:8529 \
     --env COLLECTION_KV_NAME=sample_kv \
     --env API_KEY=xxxx\
-    --image macrometalabs/sample-node-app:latest --scale-min 1
+    --image macrometalabs/sample-node-app:latest \
+    --scale-min 1 --scale-max 5
 ```
 
 ## CLI commands:
@@ -97,5 +98,5 @@ gdnsl service create sample-node-app \
 
 ## References
 
--   [Macrometa CLI](https://macrometa.com/docs/essentials/CLI/overview)
--   [Macrometa CLI Service](https://macrometa.com/docs/essentials/CLI/commands#service-gdnsl-service)
+-   [Macrometa CLI](https://macrometacorp.github.io/docs-gdnsl/)
+-   [Macrometa CLI Service](https://macrometacorp.github.io/docs-gdnsl/cmd/gdnsl_service)
