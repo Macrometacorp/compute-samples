@@ -57,7 +57,7 @@ gdnsl service create sample-node-app \
     --env URL_LOCAL_DB=c8db-coord-svc.c8.svc.cluster.local:8529 \
     --env COLLECTION_KV_NAME=sample_kv \
     --env API_KEY=xxxx\
-    --image macrometacorp/sample-node-app:latest --scale-min 1
+    --image macrometalabs/sample-node-app:latest --scale-min 1
 ```
 
 ## CLI commands:
@@ -74,10 +74,10 @@ gdnsl service create sample-node-app \
     $ gdnsl service describe sample-node-app
     ```
 
-3. Execute service endpoint using curl
+3. Execute service endpoint using curl. Copy the Compute endpoint url from `list` command
 
     ```
-    $ curl -X 'GET' <URL> --insecure
+    $ curl -X 'GET' "https://<COMPUTE_ENDPOINT_URL>?key=<ADD_KEY_FROM_KV_COLLECTION>" --insecure
     ```
 
 4. Update service configuration
