@@ -53,7 +53,7 @@ This sample app demonstrates read operations on a GDN KV collection using Local 
 Now, we are ready to deploy our sample node app on Macrometa Compute environment.
 
 ```
-gdnsl service create <service_name> \
+gdnsl service create sample-node-app \
     --env URL_LOCAL_DB=c8db-coord-svc.c8.svc.cluster.local:8529 \
     --env COLLECTION_KV_NAME=sample_kv \
     --env API_KEY=xxxx\
@@ -71,7 +71,7 @@ gdnsl service create <service_name> \
 2. Show details for a service
 
     ```
-    $ gdnsl service describe <service_name>
+    $ gdnsl service describe sample-node-app
     ```
 
 3. Execute service endpoint using curl
@@ -83,13 +83,16 @@ gdnsl service create <service_name> \
 4. Update service configuration
 
     ```
-    $ gdnsl service update <service_name>
+    $ gdnsl service update sample-node-app \
+        --env URL_LOCAL_DB=c8db-coord-svc.c8.svc.cluster.local:8529 \
+        --env COLLECTION_KV_NAME=kv_collection_v2 \
+        --env API_KEY=xxxx
     ```
 
 5. Delete a service.
 
     ```
-    $ gdnsl service delete <service_name>
+    $ gdnsl service delete sample-node-app
     ```
 
 ## References
