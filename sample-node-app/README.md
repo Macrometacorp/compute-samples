@@ -20,8 +20,8 @@ This sample app demonstrates read operations on a GDN KV collection using Local 
     ```
     $ git clone https://github.com/Macrometacorp/compute-samples.git
     cd compute-samples/sample-node-app
-    docker build -t macrometacorp/sample-node-app . --platform=linux/amd64 --no-cache
-    docker push macrometacorp/sample-node-app:latest
+    docker build -t macrometalabs/sample-node-app . --platform=linux/amd64 --no-cache
+    docker push macrometalabs/sample-node-app:latest
     ```
 
 ## Setup Macrometa Command Line Interface (CLI)
