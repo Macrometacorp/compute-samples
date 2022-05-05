@@ -47,7 +47,7 @@ $ gdnsl init
 
 The CLI prompts you to enter your GDN URL, email address, and API key associated with your Macrometa account. Please use the default `GDN URL` of `https://gdn.paas.macrometa.io` unless you have a specific `GDN URL` that you would like to use.
 
-Next, the CLI prompts you for the region you would like to deploy. When specifying a region, you may use `LOCAL`, `ALL`, or select from the list of available regions.
+Next, the CLI prompts you for the region you would like to deploy. When specifying a region, you may use `LOCAL`, `ALL`, or select from the available regions.
 
 > 💡 If you would like to deploy to multiple regions, please use a comma-separated list.
 
@@ -70,7 +70,7 @@ $ gdnsl service create sample-node-app \
 ```
 ## Helpful CLI Commands:
 
-> 💡 Further documentation for CLI commands are located [here](https://macrometacorp.github.io/docs-gdnsl/).
+> 💡 Further documentation for CLI commands is located [here](https://macrometacorp.github.io/docs-gdnsl/).
 
 ### List Available services on Compute
 
