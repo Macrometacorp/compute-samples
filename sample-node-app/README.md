@@ -11,7 +11,7 @@ This sample app demonstrates read operations on a GDN Key-Value collection.
 
 ## Build Docker container
 
-Use the following commands to build and push the container image to the Docker hub. Please update `macrometalabs/sample-node-app` with your Docker repository using the following commands:
+Use the following commands to build and push the container image to the Docker hub. Update `macrometalabs/sample-node-app` with your Docker repository using the following commands:
 
 ```bash
 $ git clone https://github.com/Macrometacorp/compute-samples.git
@@ -31,7 +31,7 @@ npm install -g gdnsl
 
 ### Create a Macrometa API Key
 
-You will need an API key to deploy serverless microservices and make API calls to Macrometa.
+Create an API key to deploy serverless microservices and make API calls to Macrometa.
 
 If you already have an existing Macrometa account, you can generate an API key by visiting your dashboard and navigating to `Account` → `API Keys` → `New API Key`. 
 
@@ -45,17 +45,13 @@ To initialize the GDNSL CLI, navigate the directory you'd like to use and issue 
 $ gdnsl init
 ```
 
-The CLI will prompt you to enter your GDN URL, email address, and API key associated with your Macrometa account. Please use the default `GDN URL` of `https://gdn.paas.macrometa.io` unless you have a specific `GDN URL` that you would like to use.
+The CLI prompts you to enter your GDN URL, email address, and API key associated with your Macrometa account. Please use the default `GDN URL` of `https://gdn.paas.macrometa.io` unless you have a specific `GDN URL` that you would like to use.
 
-It will then prompt you for the region you would like to deploy. When specifying a region, you may use `LOCAL`, `ALL`, or select from the following regions:
-
-- `gdn-eu-central`
-- `gdn-us-west`
-- `gdn-ap-south`
+Next, the CLI prompts you for the region you would like to deploy. When specifying a region, you may use `LOCAL`, `ALL`, or select from the list of available regions.
 
 > 💡 If you would like to deploy to multiple regions, please use a comma-separated list.
 
-Once you complete the initialization, the CLI will save a `gdnsl.yaml` configuration file in the directory.
+Once you complete the initialization, the CLI saves a `gdnsl.yaml` configuration file in the directory.
 
 ![GDNSL CLI Init](https://i.imgur.com/c4bkk5C.png)
 
@@ -74,7 +70,7 @@ $ gdnsl service create sample-node-app \
 ```
 ## Helpful CLI Commands:
 
-> 💡 Further documentation for CLI commands are located [here](https://macrometa.com/docs/essentials/CLI/commands).
+> 💡 Further documentation for CLI commands are located [here](https://macrometacorp.github.io/docs-gdnsl/).
 
 ### List Available services on Compute
 
@@ -119,5 +115,5 @@ $ gdnsl service delete sample-node-app
 
 ## Resources
 
--  [Macrometa CLI Docs](https://macrometa.com/docs/essentials/CLI/overview)
--  [Macrometa CLI Service](https://macrometa.com/docs/essentials/CLI/commands#service-gdnsl-service)
+- [Macrometa CLI](https://macrometacorp.github.io/docs-gdnsl/)
+- [Macrometa CLI Service](https://macrometacorp.github.io/docs-gdnsl/cmd/gdnsl_service)
